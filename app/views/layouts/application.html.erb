@@ -6,12 +6,27 @@
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'unslider', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <nav>
+    <ul>
+      <li>Léo</li>
+      <li><%= link_to 'Weclome', welcome_path %></li>
+      <li><%= link_to 'Portfolio', portfolio_path %></li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+</header>
 <%= yield %>
-
+<footer>
+  <a href="">GitHub</a>
+  <a href="">LinkedIn</a>
+  <a href="">Copyright</a>
+</footer>
 </body>
 </html>
